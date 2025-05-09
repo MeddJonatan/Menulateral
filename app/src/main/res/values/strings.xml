@@ -13,4 +13,11 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="region">Region</string>
+    <string name="total_sales">Total Sales</string>
+    <string name="product_name">Product Name</string>
+    <string name="ventas_regi_n">Ventas Región</string>
+    <string name="ventas_cuatrimestre" />
+    <string name="satisfaccion_cliente" />
+    <string name="ventas_region" />
 </resources>

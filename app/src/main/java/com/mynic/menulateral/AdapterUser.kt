@@ -7,25 +7,23 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class AdapterUser( context: Context, idResourse:Int, usuarios: List<User> ):
-    ArrayAdapter<User>(context, idResourse, usuarios)
-{
+data class User(val nombre: String, val email: String)
 
-        //Para cada elemento de la lista le aplica un diseño de vista
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+class AdapterUser(
+    context: Context,
+    private val idRecurso: Int,
+    private val usuarios: List<User>
+) : ArrayAdapter<User>(context, idRecurso, usuarios) {
 
-            //Se crea una vista vacia
-            var itemView = convertView
-        if (itemView == null) {
-            //Se infla la vista con el diseño de la la simplelist
-            itemView = LayoutInflater.from(context).inflate(R.layout.simpleitemlist, parent, false)
-        }
-            //Obtenemos el objeto de la lista
-        val ItemActual = getItem(position)
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val itemView = convertView ?: LayoutInflater
+            .from(context)
+            .inflate(idRecurso, parent, false)
 
-            //Asigamos cada campo del objeto con su respectivo diseño
-        itemView!!.findViewById<TextView>(R.id.txtNombre).text= ItemActual?.nombre
-        itemView.findViewById<TextView>(R.id.txtemail).text = ItemActual?.email
+        val itemActual = getItem(position)
+        itemView.findViewById<TextView>(R.id.txtNombre).text = itemActual?.nombre
+        itemView.findViewById<TextView>(R.id.txtEmail ).text = itemActual?.email
+
         return itemView
     }
 }

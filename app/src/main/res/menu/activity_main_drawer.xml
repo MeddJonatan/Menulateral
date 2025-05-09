@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-        <item
-            android:id="@+id/graficas"
-            android:icon="@drawable/baseline_area_chart_24"
-            android:title="Graficas"
-            />
-    </group>
-    <group android:checkableBehavior="single">
     <item
-        android:id="@+id/reportes"
-        android:icon="@drawable/baseline_analytics_24"
-        android:title="Reportes"
-        />
-    </group>
+        android:id="@+id/nav_venta_region"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Ventas Region"
+        android:visible="true"
+        app:destination="@id/productoRegionFragment" />
+
+    <item
+        android:id="@+id/nav_venta_producto"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Ventas cuatrimestre"
+        android:visible="true"
+        app:destination="@id/ventaProductoFragment" />
+
+    <item
+        android:id="@+id/nav_satisfaccion_cliente"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Satisfaccion Cliente"
+        android:visible="true"
+        app:destination="@id/satisfaccionClienteFragment" />
 </menu>

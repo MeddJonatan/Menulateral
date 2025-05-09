@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,4 +33,23 @@
         android:name="com.mynic.menulateral.Reportes"
         android:label="fragment_reportes"
         tools:layout="@layout/fragment_reportes" />
+
+    <fragment
+        android:id="@+id/productoRegionFragment"
+        android:name="com.mynic.menulateral.ProductoRegionFragment"
+        android:label="Ventas por Región"
+        tools:layout="@layout/fragment_producto_region" />
+
+    <!-- Destinos para VentaProducto y SatisfaccionCliente -->
+    <fragment
+        android:id="@+id/ventaProductoFragment"
+        android:name="com.mynic.menulateral.VentaProductoFragment"
+        android:label="Ventas por Cuatrimestre"
+        tools:layout="@layout/fragment_venta_producto" />
+
+    <fragment
+        android:id="@+id/satisfaccionClienteFragment"
+        android:name="com.mynic.menulateral.SatisfaccionClienteFragment"
+        android:label="Satisfacción Cliente"
+        tools:layout="@layout/fragment_satisfaccion_cliente" />
 </navigation>
